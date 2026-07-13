@@ -20,7 +20,7 @@ def main() -> None:
     while True:
         frame_time = clock.tick(FPS_CAP) / 1000.0
         frame_time = min(frame_time, 0.25)
-        accumulator = +frame_time
+        accumulator += frame_time
         while accumulator >= FIXED_DT:
             update(FIXED_DT)
             accumulator -= FIXED_DT
